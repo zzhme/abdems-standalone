@@ -16,14 +16,14 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/abdems?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://mysql:3306/springboot?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
     username: root
     password: root
   application:
     name: redis-spring-boot-test
   data:
     redis:
-      host: localhost
+      host: redis
       port: 6379
       jedis:
         pool:

@@ -1,6 +1,5 @@
 package com.zzh.web.exception;
 
-import com.zzh.pojo.Emp;
 import com.zzh.pojo.Result;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

@@ -1,5 +1,5 @@
-create database if not exists abdems;
-use abdems;
+create database if not exists springboot;
+use springboot;
 -- 删除brand表
 drop table if exists brand;
 -- 创建brand表

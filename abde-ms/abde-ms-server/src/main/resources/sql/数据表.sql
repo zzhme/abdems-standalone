@@ -215,3 +215,130 @@ create table if not exists operate_log(
       return_value varchar(2000) comment '返回值',
       cost_time bigint comment '方法执行耗时, 单位:ms'
 ) comment '操作日志表';
+
+-- 删除brand表
+drop table if exists brand;
+-- 创建brand表
+create table if not exists brand
+(
+    -- id 主键
+    id           int primary key auto_increment,
+    -- 品牌名称
+    brand_name   varchar(100),
+    -- 企业名称
+    company_name varchar(100),
+    -- 排序字段
+    ordered      int,
+    -- 图片
+    image varchar(200),
+    -- 描述信息
+    description  varchar(200),
+    -- 状态：0：禁用  1：启用
+    status       int
+);
+-- 添加数据
+insert into brand (brand_name, company_name, ordered, image, description, status)
+values
+    ('华为', '华为技术有限公司', 100, 'huawei-1.jpg', '万物互联', 1),
+    ('小米', '小米科技有限公司', 50, 'xiaomi-2.jpg', 'are you ok', 1),
+    ('格力', '格力电器股份有限公司', 30, 'geli-3.jpg', '让世界爱上中国造', 1),
+    ('阿里巴巴', '阿里巴巴集团控股有限公司', 10, 'ali-4.jpg',  '买买买', 1),
+    ('腾讯', '腾讯计算机系统有限公司', 50,'tengxun-5.jpg',  '玩玩玩', 0),
+    ('百度', '百度在线网络技术公司', 5, 'baidu-6.jpg', '搜搜搜', 0),
+    ('京东', '北京京东世纪贸易有限公司', 40, 'jingdong-7.jpg', '就是快', 1),
+    ('小米', '小米科技有限公司', 50, 'xiaomi-2.jpg', 'are you ok', 1),
+    ('三只松鼠', '三只松鼠股份有限公司', 5, 'songshu-8.jpg', '好吃不上火', 0),
+
+    ('华为', '华为技术有限公司', 100, 'huawei-1.jpg', '万物互联', 1),
+    ('小米', '小米科技有限公司', 50, 'xiaomi-2.jpg', 'are you ok', 1),
+    ('格力', '格力电器股份有限公司', 30, 'geli-3.jpg', '让世界爱上中国造', 1),
+    ('阿里巴巴', '阿里巴巴集团控股有限公司', 10, 'ali-4.jpg', '买买买', 1),
+    ('腾讯', '腾讯计算机系统有限公司', 50, 'tengxun-5.jpg', '玩玩玩', 0),
+    ('百度', '百度在线网络技术公司', 5, 'baidu-6.jpg', '搜搜搜', 0),
+    ('京东', '北京京东世纪贸易有限公司', 40, 'jingdong-7.jpg', '就是快', 1),
+
+    ('华为', '华为技术有限公司', 100, 'huawei-1.jpg', '万物互联', 1),
+    ('小米', '小米科技有限公司', 50, 'xiaomi-2.jpg', 'are you ok', 1),
+    ('格力', '格力电器股份有限公司', 30, 'geli-3.jpg', '让世界爱上中国造', 1),
+    ('阿里巴巴', '阿里巴巴集团控股有限公司',  10, 'ali-4.jpg', '买买买', 1),
+    ('腾讯', '腾讯计算机系统有限公司', 50, 'tengxun-5.jpg', '玩玩玩', 0),
+    ('百度', '百度在线网络技术公司', 5, 'baidu-6.jpg', '搜搜搜', 0),
+    ('京东', '北京京东世纪贸易有限公司', 40, 'jingdong-7.jpg', '就是快', 1),
+    ('小米', '小米科技有限公司', 50, 'xiaomi-2.jpg', 'are you ok', 1),
+    ('三只松鼠', '三只松鼠股份有限公司', 5, 'songshu-8.jpg', '好吃不上火', 0),
+
+    ('华为', '华为技术有限公司', 100, 'huawei-1.jpg', '万物互联', 1),
+    ('小米', '小米科技有限公司', 50, 'xiaomi-2.jpg', 'are you ok', 1),
+    ('格力', '格力电器股份有限公司', 30, 'geli-3.jpg', '让世界爱上中国造', 1),
+    ('阿里巴巴', '阿里巴巴集团控股有限公司', 10, 'ali-4.jpg', '买买买', 1),
+    ('腾讯', '腾讯计算机系统有限公司', 50, 'tengxun-5.jpg', '玩玩玩', 0),
+    ('百度', '百度在线网络技术公司', 5, 'baidu-6.jpg', '搜搜搜', 0),
+
+    ('京东', '北京京东世纪贸易有限公司', 40, 'jingdong-7.jpg', '就是快', 1),
+    ('华为', '华为技术有限公司', 100, 'huawei-1.jpg', '万物互联', 1),
+    ('小米', '小米科技有限公司', 50, 'xiaomi-2.jpg', 'are you ok', 1),
+    ('格力', '格力电器股份有限公司', 30, 'geli-3.jpg', '让世界爱上中国造', 1),
+    ('阿里巴巴', '阿里巴巴集团控股有限公司', 10, 'ali-4.jpg', '买买买', 1),
+    ('腾讯', '腾讯计算机系统有限公司', 50, 'tengxun-5.jpg', '玩玩玩', 0),
+    ('百度', '百度在线网络技术公司', 5, 'baidu-6.jpg', '搜搜搜', 0),
+    ('京东', '北京京东世纪贸易有限公司', 40, 'jingdong-7.jpg', '就是快', 1),
+    ('小米', '小米科技有限公司', 50, 'xiaomi-2.jpg', 'are you ok', 1),
+    ('三只松鼠', '三只松鼠股份有限公司', 5, 'songshu-8.jpg', '好吃不上火', 0),
+
+    ('华为', '华为技术有限公司', 100, 'huawei-1.jpg', '万物互联', 1),
+    ('小米', '小米科技有限公司', 50, 'xiaomi-2.jpg', 'are you ok', 1),
+    ('格力', '格力电器股份有限公司', 30, 'geli-3.jpg', '让世界爱上中国造', 1),
+    ('阿里巴巴', '阿里巴巴集团控股有限公司', 10, 'ali-4.jpg', '买买买', 1),
+    ('腾讯', '腾讯计算机系统有限公司', 50, 'tengxun-5.jpg', '玩玩玩', 0),
+    ('百度', '百度在线网络技术公司', 5, 'baidu-6.jpg', '搜搜搜', 0),
+    ('京东', '北京京东世纪贸易有限公司', 40, 'jingdong-7.jpg', '就是快', 1);
+
+-- =========================================
+-- 产品表（在已有业务库中执行，例如 jhytest 或 abde_db）
+-- =========================================
+drop table if exists product;
+
+create table product (
+                         id bigint unsigned primary key auto_increment comment '产品ID',
+                         name varchar(100) not null comment '产品名称',
+                         description varchar(500) default null comment '产品简介',
+                         cover_url varchar(500) default null comment '封面图URL（OSS等）',
+                         price decimal(12, 2) not null default 0.00 comment '单价',
+                         status tinyint unsigned not null default 1 comment '状态: 1上架 0下架',
+                         create_time datetime not null default current_timestamp comment '创建时间',
+                         update_time datetime not null default current_timestamp on update current_timestamp comment '更新时间'
+) engine=innodb default charset=utf8mb4 comment='产品表';
+
+create index idx_product_name on product(name);
+create index idx_product_status on product(status);
+
+-- =========================================
+-- 测试数据（cover_url 可替换为你实际上传后的 OSS 地址）
+-- =========================================
+insert into product (name, description, cover_url, price, status)
+values
+    ('Spring Boot 实战教程', '从入门到项目实战，含 JWT、MyBatis、OSS 上传等', 'https://example.com/covers/spring-boot.png', 99.00, 1),
+    ('Vue2 管理后台模板', 'Element UI 表格、表单、路由守卫示例', 'https://example.com/covers/vue-admin.png', 49.90, 1),
+    ('MySQL 性能优化笔记', '索引、执行计划、分页与慢查询', 'https://example.com/covers/mysql.png', 68.00, 0),
+    ('阿里云 OSS 对象存储入门', 'Java SDK 上传与访问域名说明', 'https://example.com/covers/oss.png', 19.90, 1);
+
+
+create database if not exists springboot;
+use springboot;
+drop table if exists account;
+create table if not exists account(
+                                      id int primary key auto_increment comment '主键',
+                                      name varchar(100) not null unique comment '账户名称',
+                                      money double(10,2) comment '账户余额',
+                                      home_address varchar(200) comment '家庭地址'
+
+);
+insert into account (name, money,home_address)
+values
+    ('tom',10000,'北京昌平区'),
+    ('jack',50000,'浙江杭州余杭区'),
+    ('lucy',80000,'江苏徐州沛县'),
+    ('jerry',30000,'山东聊城高唐县'),
+    ('kitty',60000,'浙江杭州西湖区'),
+    ('merry',20000,'湖北武汉江汉区'),
+    ('lily',70000,'湖南长沙芙蓉区');

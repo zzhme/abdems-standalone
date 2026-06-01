@@ -1,6 +1,6 @@
-drop database if exists abdems;
-create database if not exists abdems;
-use abdems;
+drop database if exists springboot;
+create database if not exists springboot;
+use springboot;
 -- 删除部门表
 drop table if exists dept;
 
